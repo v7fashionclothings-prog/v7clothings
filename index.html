@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loom & Thread | Premium Artisanal Textiles</title>
+  <meta name="description" content="Discover exquisite organic linen, royal silk, pure cotton, and fine wool fabrics. Sustainable, premium textiles crafted for timeless designs.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar" id="app-header">
+    <div class="nav-container">
+      <a href="#" class="logo" id="nav-logo">
+        <span class="logo-accent">Loom</span> & Thread
+      </a>
+      
+      <nav class="nav-menu" id="nav-links">
+        <a href="#home" class="nav-link active" data-view="home">Home</a>
+        <a href="#shop" class="nav-link" data-view="shop">Shop Fabrics</a>
+        <a href="#about" class="nav-link" data-view="about">Our Story</a>
+        <a href="#contact" class="nav-link" data-view="contact">Contact</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button class="icon-btn cart-btn" id="cart-toggle-btn" aria-label="Open cart">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay" id="mobile-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <span class="logo"><span class="logo-accent">Loom</span> & Thread</span>
+      <button class="icon-btn close-btn" id="mobile-close-btn"><i data-lucide="x"></i></button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#home" class="mobile-nav-link active" data-view="home">Home</a>
+      <a href="#shop" class="mobile-nav-link" data-view="shop">Shop Fabrics</a>
+      <a href="#about" class="mobile-nav-link" data-view="about">Our Story</a>
+      <a href="#contact" class="mobile-nav-link" data-view="contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- App Views Container -->
+  <main id="app-content">
+    
+    <!-- HOME VIEW -->
+    <section id="view-home" class="app-view active">
+      <!-- Hero Carousel Slider -->
+      <section class="hero-slider" id="hero-carousel">
+        <!-- Will be dynamically populated by Hero.js -->
+      </section>
+
+      <!-- Featured Categories -->
+      <section class="featured-categories section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="subtitle">The Collection</span>
+            <h2>Artisanal Weaves</h2>
+            <div class="accent-line"></div>
+          </div>
+          <div class="category-grid">
+            <div class="category-card" data-category="Linen">
+              <div class="category-img-wrapper">
+                <img src="/assets/linen_texture.png" alt="Pure Linen" loading="lazy">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="category-info">
+                <h3>Pure Linen</h3>
+                <p>Breathable, textured, and timeless organic fibers.</p>
+                <span class="explore-link">Explore Linen <i data-lucide="arrow-right"></i></span>
+              </div>
+            </div>
+            <div class="category-card" data-category="Silk">
+              <div class="category-img-wrapper">
+                <img src="/assets/silk_texture.png" alt="Royal Silk" loading="lazy">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="category-info">
+                <h3>Royal Silk</h3>
+                <p>Lustrous, fluid elegance of premium mulberry silk.</p>
+                <span class="explore-link">Explore Silk <i data-lucide="arrow-right"></i></span>
+              </div>
+            </div>
+            <div class="category-card" data-category="Cotton">
+              <div class="category-img-wrapper">
+                <img src="/assets/cotton_texture.png" alt="Organic Cotton" loading="lazy">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="category-info">
+                <h3>Organic Cotton</h3>
+                <p>Soft, durable, and ethically harvested natural cotton.</p>
+                <span class="explore-link">Explore Cotton <i data-lucide="arrow-right"></i></span>
+              </div>
+            </div>
+            <div class="category-card" data-category="Wool">
+              <div class="category-img-wrapper">
+                <img src="/assets/wool_texture.png" alt="Fine Wool" loading="lazy">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="category-info">
+                <h3>Fine Wool</h3>
+                <p>Warm, resilient, and luxurious merino blends.</p>
+                <span class="explore-link">Explore Wool <i data-lucide="arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand Value / Story Preview -->
+      <section class="brand-story-preview">
+        <div class="container grid-2">
+          <div class="story-image">
+            <img src="/assets/hero_linen.png" alt="Artisan weaving textile" class="parallax-img">
+          </div>
+          <div class="story-content">
+            <span class="subtitle">Ethical Craftsmanship</span>
+            <h2>Woven with intent, made to last generations.</h2>
+            <p>At Loom & Thread, we partner with heritage farming communities to source the highest quality fibers. Each yard of fabric undergoes slow, meticulous weaving, preserving ancient traditions while adhering to GOTS certified sustainable practices.</p>
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Organic Fibers</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Heritage Weaves</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">GOTS</span>
+                <span class="stat-label">Certified Eco</span>
+              </div>
+            </div>
+            <a href="#about" class="btn btn-primary" data-view="about">Our Story</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- SHOP VIEW -->
+    <section id="view-shop" class="app-view">
+      <div class="shop-header">
+        <div class="container">
+          <h1>Fabric Archives</h1>
+          <p>Filter through our curated collection of luxury sustainable textiles sold by the yard.</p>
+        </div>
+      </div>
+
+      <div class="shop-layout container">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar">
+          <div class="filter-section">
+            <h3>Search</h3>
+            <div class="search-box">
+              <input type="text" id="search-input" placeholder="Search fabrics...">
+              <i data-lucide="search"></i>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3>Material</h3>
+            <div class="filter-options" id="material-filters">
+              <button class="filter-pill active" data-material="all">All</button>
+              <button class="filter-pill" data-material="Linen">Linen</button>
+              <button class="filter-pill" data-material="Silk">Silk</button>
+              <button class="filter-pill" data-material="Cotton">Cotton</button>
+              <button class="filter-pill" data-material="Wool">Wool</button>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3>Price Range (per yard)</h3>
+            <div class="price-slider-container">
+              <input type="range" id="price-range" min="10" max="150" value="150">
+              <div class="price-labels">
+                <span>$10</span>
+                <span id="price-max-label">Max: $150</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3>Weave Type</h3>
+            <div class="checkbox-group" id="weave-filters">
+              <label class="custom-checkbox">
+                <input type="checkbox" value="Plain" checked>
+                <span class="checkmark"></span> Plain Weave
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" value="Twill" checked>
+                <span class="checkmark"></span> Twill
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" value="Satin" checked>
+                <span class="checkmark"></span> Satin
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" value="Jacquard" checked>
+                <span class="checkmark"></span> Jacquard
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-outline btn-block" id="clear-filters-btn">Clear All Filters</button>
+        </aside>
+
+        <!-- Product Results -->
+        <div class="shop-results-container">
+          <div class="results-header">
+            <span class="results-count" id="results-count">Showing 0 products</span>
+            <div class="sort-selector">
+              <label for="sort-select">Sort by</label>
+              <select id="sort-select">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="alphabetical">Alphabetical</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Product Grid -->
+          <div class="product-grid" id="product-grid">
+            <!-- Dynamically populated by Catalog.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT VIEW -->
+    <section id="view-about" class="app-view section-padding">
+      <div class="container narrow-container text-content">
+        <span class="subtitle text-center d-block">Loom & Thread</span>
+        <h1 class="text-center">Crafting a Sustainable Legacy</h1>
+        <div class="accent-line center"></div>
+        
+        <p class="lead">We believe that luxury shouldn't compromise the planet. Our journey began with a simple quest: to source textiles that respect the environment, support the local weavers, and present an unmatched sensory experience.</p>
+        
+        <h3>The Artisans Behind the Loom</h3>
+        <p>Our fabrics are produced in collaboration with three multi-generational heritage workshops across Italy, India, and Japan. Each workshop brings distinct, century-old techniques to our collection—from Italian jacquard craftsmanship to Indian hand-block printing and Japanese slow-dyeing indigo methods.</p>
+        
+        <div class="image-showcase my-4">
+          <img src="/assets/hero_linen.png" alt="Artisanal looms weaving fabric" class="rounded-img shadow">
+        </div>
+
+        <h3>Circular & Organic Standards</h3>
+        <p>Every single fiber we use is fully traceable. Our cotton is GOTS certified organic, our wool is cruelty-free merino sourced from sustainable ethical farms, and our linen requires minimal water and zero pesticides to cultivate. Our dyeing process uses low-impact, non-toxic organic compounds, recycling 98% of the water in a closed-loop system.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT VIEW -->
+    <section id="view-contact" class="app-view section-padding">
+      <div class="container grid-2">
+        <div>
+          <span class="subtitle">Get In Touch</span>
+          <h1>We'd love to hear from you</h1>
+          <p class="my-4">Are you a designer, brand, or hobbyist looking for premium swatches or custom runs? Drop us a message, and our textile specialists will guide you.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <i data-lucide="map-pin"></i>
+              <div>
+                <h4>Showroom & Atelier</h4>
+                <p>844 Linen Lane, Suite 100, New York, NY 10013</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="mail"></i>
+              <div>
+                <h4>Inquiries</h4>
+                <p>hello@loomandthread.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="phone"></i>
+              <div>
+                <h4>Support</h4>
+                <p>+1 (800) 555-LOOM (Mon - Fri, 9am - 5pm EST)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card shadow">
+          <h3>Send Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Your Message</label>
+              <textarea id="contact-message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h2>Shopping Cart (<span id="cart-drawer-count">0</span>)</h2>
+      <button class="icon-btn close-btn" id="cart-close-btn" aria-label="Close cart"><i data-lucide="x"></i></button>
+    </div>
+    
+    <div class="cart-drawer-content">
+      <!-- Cart Items -->
+      <div class="cart-items" id="cart-items-container">
+        <!-- Dynamically populated by Cart.js -->
+        <div class="empty-cart-state">
+          <i data-lucide="shopping-bag" class="huge-icon"></i>
+          <p>Your shopping bag is empty.</p>
+          <a href="#shop" class="btn btn-outline" id="cart-empty-shop-btn">Browse Fabrics</a>
+        </div>
+      </div>
+
+      <!-- Checkout summary (if items exist) -->
+      <div class="cart-summary" id="cart-summary-section" style="display: none;">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping (Calculated next)</span>
+          <span class="shipping-free">FREE</span>
+        </div>
+        <div class="coupon-section">
+          <input type="text" id="coupon-input" placeholder="Promo code">
+          <button class="btn btn-sm btn-outline" id="apply-coupon-btn">Apply</button>
+        </div>
+        <div class="discount-display" id="discount-display" style="display: none;">
+          <span>Discount (15% Off - ECOWEAVE)</span>
+          <span id="discount-amount">-$0.00</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="modal-overlay" id="product-detail-modal">
+    <div class="modal-container">
+      <button class="icon-btn close-btn modal-close-btn" id="product-modal-close" aria-label="Close details">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-content-grid" id="product-modal-content">
+        <!-- Dynamically populated by ProductDetail.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL (STEPPED FLOW) -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-container checkout-container">
+      <button class="icon-btn close-btn modal-close-btn" id="checkout-modal-close" aria-label="Close checkout">
+        <i data-lucide="x"></i>
+      </button>
+      
+      <div class="checkout-steps-nav">
+        <div class="step-nav active" data-step="1">
+          <span class="step-num">1</span>
+          <span class="step-label">Shipping</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step-nav" data-step="2">
+          <span class="step-num">2</span>
+          <span class="step-label">Payment</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step-nav" data-step="3">
+          <span class="step-num">3</span>
+          <span class="step-label">Success</span>
+        </div>
+      </div>
+
+      <div class="checkout-grid">
+        <!-- Checkout Form Left Side -->
+        <div class="checkout-form-container">
+          
+          <!-- STEP 1: SHIPPING -->
+          <div class="checkout-step active" id="checkout-step-1">
+            <h3>Shipping Details</h3>
+            <form id="shipping-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="ship-fname">First Name</label>
+                  <input type="text" id="ship-fname" required value="John">
+                </div>
+                <div class="form-group">
+                  <label for="ship-lname">Last Name</label>
+                  <input type="text" id="ship-lname" required value="Doe">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ship-address">Address</label>
+                <input type="text" id="ship-address" required value="123 Artisan Way">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="ship-city">City</label>
+                  <input type="text" id="ship-city" required value="New York">
+                </div>
+                <div class="form-group">
+                  <label for="ship-state">State</label>
+                  <input type="text" id="ship-state" required value="NY">
+                </div>
+                <div class="form-group">
+                  <label for="ship-zip">ZIP Code</label>
+                  <input type="text" id="ship-zip" required value="10013">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block my-4">Continue to Payment</button>
+            </form>
+          </div>
+
+          <!-- STEP 2: PAYMENT -->
+          <div class="checkout-step" id="checkout-step-2">
+            <h3>Payment Information</h3>
+            <form id="payment-form">
+              <div class="form-group">
+                <label for="card-name">Name on Card</label>
+                <input type="text" id="card-name" required value="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <div class="input-with-icon">
+                  <input type="text" id="card-number" placeholder="4111 2222 3333 4444" required value="4111 2222 3333 4444">
+                  <i data-lucide="credit-card"></i>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="card-expiry">Expiry Date</label>
+                  <input type="text" id="card-expiry" placeholder="MM/YY" required value="12/28">
+                </div>
+                <div class="form-group">
+                  <label for="card-cvv">CVV</label>
+                  <input type="password" id="card-cvv" placeholder="•••" maxlength="4" required value="123">
+                </div>
+              </div>
+              <div class="payment-badges my-3">
+                <i data-lucide="shield-check" class="secure-icon"></i>
+                <span>SSL Encrypted Secure Payment</span>
+              </div>
+              <div class="form-row">
+                <button type="button" class="btn btn-outline" id="payment-back-btn">Back to Shipping</button>
+                <button type="submit" class="btn btn-primary" id="payment-submit-btn">Place Order <span id="payment-btn-amount"></span></button>
+              </div>
+            </form>
+          </div>
+
+          <!-- STEP 3: SUCCESS -->
+          <div class="checkout-step text-center" id="checkout-step-3">
+            <div class="success-checkmark-wrapper">
+              <div class="success-checkmark">
+                <i data-lucide="check-circle-2"></i>
+              </div>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p class="my-3">Thank you for your purchase. We are preparing your artisanal swatches and cuts. A confirmation email has been sent to your address.</p>
+            <div class="order-summary-box my-4">
+              <div class="summary-line">
+                <span>Order Reference:</span>
+                <strong id="success-order-ref">LT-492041</strong>
+              </div>
+              <div class="summary-line">
+                <span>Estimated Delivery:</span>
+                <strong id="success-delivery-date">May 28, 2026</strong>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="success-shop-btn">Continue Shopping</button>
+          </div>
+
+        </div>
+
+        <!-- Checkout Order Review Right Side -->
+        <div class="checkout-review-sidebar" id="checkout-review-sidebar">
+          <h3>Order Review</h3>
+          <div class="review-items" id="checkout-review-items">
+            <!-- Dynamically populated -->
+          </div>
+          <div class="review-summary">
+            <div class="summary-line">
+              <span>Subtotal</span>
+              <span id="checkout-review-subtotal">$0.00</span>
+            </div>
+            <div class="summary-line" id="checkout-review-discount-row" style="display: none;">
+              <span>Discount</span>
+              <span id="checkout-review-discount">-$0.00</span>
+            </div>
+            <div class="summary-line">
+              <span>Shipping</span>
+              <span class="shipping-free">FREE</span>
+            </div>
+            <div class="summary-line total-line">
+              <span>Total</span>
+              <span id="checkout-review-total">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><span class="logo-accent">Loom</span> & Thread</a>
+        <p class="my-3">Exquisite sustainable textiles, woven to withstand the sands of time. Partnering with multi-generational weaving collectives globally.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i data-lucide="pinterest"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="#shop" data-view="shop" data-category="Linen">Pure Linen</a></li>
+          <li><a href="#shop" data-view="shop" data-category="Silk">Royal Silk</a></li>
+          <li><a href="#shop" data-view="shop" data-category="Cotton">Organic Cotton</a></li>
+          <li><a href="#shop" data-view="shop" data-category="Wool">Fine Wool</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>About & Support</h4>
+        <ul>
+          <li><a href="#about" data-view="about">Our Story</a></li>
+          <li><a href="#about" data-view="about">Sustainability Standards</a></li>
+          <li><a href="#contact" data-view="contact">Contact Showroom</a></li>
+          <li><a href="#contact" data-view="contact">Custom Runs & Orders</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>The Loom Newsletter</h4>
+        <p>Subscribe to receive fabric swatches, artisan stories, and exclusive collection notifications.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Your Email Address" required aria-label="Email for newsletter">
+          <button type="submit" aria-label="Subscribe"><i data-lucide="send"></i></button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Loom & Thread Textiles. All rights reserved. GOTS Certified organic cotton products. Crafted ethically.</p>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Main Script Entry -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
