@@ -204,7 +204,7 @@ function setupContactForm() {
       e.preventDefault();
       
       const name = document.getElementById('contact-name').value;
-      alert(`Thank you, ${name}! Your inquiry has been sent to Loom & Thread specialists. We will get back to you within 24 hours.`);
+      alert(`Thank you, ${name}! Your inquiry has been sent to V7fashion specialists. We will get back to you within 24 hours.`);
       form.reset();
     });
   }
@@ -213,7 +213,7 @@ function setupContactForm() {
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Thank you for subscribing to The Loom Newsletter! Your first fabric swatches update is on the way.');
+      alert('Thank you for subscribing to The V7fashion Newsletter! Your first fabric swatches update is on the way.');
       newsletterForm.reset();
     });
   }
